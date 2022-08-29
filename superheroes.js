@@ -507,9 +507,10 @@ const superheroes = [
 superheroes.forEach(showProduct);
 
 function showProduct(superheroes) {
-  const template = document.querySelector("template").content;
+  const template = document.querySelector("#superhero").content;
   const clone = template.cloneNode(true);
   clone.querySelector(".info .name").textContent = superheroes.alias;
+  clone.querySelector(".info .img").src = superheroes.img;
   clone.querySelector(".info .color").textContent = superheroes.primaryColor;
   clone.querySelector(".info .abilities").textContent = superheroes.abilities;
   clone.querySelector(".info .enemies").textContent = superheroes.enemies;
